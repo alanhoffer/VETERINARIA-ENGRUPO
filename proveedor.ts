@@ -1,12 +1,14 @@
 import {Persona} from './persona'
+import {IComunicarse} from './IComunicarse'
+import { Cliente } from './cliente';
 
-export class Proveedor extends Persona {
+export class Proveedor extends Persona implements IComunicarse {
 
-    protected cuit:number;
+    private cuit:number;
 
-    constructor (idI:number, nombreI:string,telefonoI:number,cuitI:number){
-        super(idI,nombreI,telefonoI);
-        this.cuit = cuitI;
+    constructor(id:number,nombre:string,telefono:number, cuit:number){
+        super(id,nombre,telefono);
+        this.cuit = cuit;
     }
 
     public getCuit(){
@@ -17,4 +19,11 @@ export class Proveedor extends Persona {
         this.cuit = nuevoCuit;
     }
 
+    public comunicarse():string{
+        return this.construirMensaje()+"PRUEBA";
+    }
+
+    construirMensaje(): string {
+        return "Hola, soy el Proveedor "+this.getNombre()+" ";
+    }
 }

@@ -1,27 +1,22 @@
-export class Persona {
+ export abstract class Persona {
 
-    protected id:number;
-    protected nombre:string;
-    protected telefono:number;
-
-    constructor(idI:number, nombreI:string,telefonoI:number){
-        
-        this.id = idI;
-        this.nombre = nombreI;
-        this.telefono = telefonoI;
-
+    constructor(private id:number, private nombre:string, private telefono:number) {
     }
 
-    public getId(){
+    public getId():number{
         return this.id;
     }
 
-    public getNombre (){
+    public getNombre():string{
         return this.nombre;
     }
 
-    public getTelefono (){
+    public getTelefono():number{
         return this.telefono;
+    }
+
+    public setId(nuevoId:number){
+        this.id = nuevoId;
     }
 
     public cambiarNombre(nuevoNombre:string){
@@ -32,4 +27,10 @@ export class Persona {
         this.telefono = nuevoTelefono;
     }
 
+    public saludar():string{
+        return "Estoy saludando";
+    }
+
+    abstract construirMensaje():string ;
+    
 }
