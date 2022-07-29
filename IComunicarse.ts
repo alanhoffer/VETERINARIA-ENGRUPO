@@ -2,7 +2,7 @@
 
 export interface IComunicarse{
 
-    /*  comunicarse(receptor:Veterinaria):string;*/
+    /*comunicarse(receptor:Veterinaria):string;*/
     comunicarse():string;
 
  }
