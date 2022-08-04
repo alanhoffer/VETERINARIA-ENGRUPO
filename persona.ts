@@ -1,6 +1,13 @@
  export abstract class Persona {
 
-    constructor(private id:number, private nombre:string, private telefono:number) {
+    private id:number;
+    private nombre:string;
+    private telefono:number;
+
+    constructor(id:number, nombre:string, telefono:number) {
+        this.id = id;
+        this.nombre = nombre;
+        this.telefono = telefono;
     }
 
     public getId():number{
