@@ -12,7 +12,7 @@ export class Cliente extends Persona implements IComunicarse{
         this.visitas = 0;
         this.vip = false;
     }
-
+    
     public newVisita(){
         this.visitas++
         if (this.visitas >= 5 && this.vip === false ){
