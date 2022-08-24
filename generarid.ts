@@ -1,17 +1,14 @@
-function generarId() {
+function randomId() {
     return Math.random() * (99999 - 1) + 1;
 }
 
 
-
-let arreglo = [{id: 1}, {id: 2}]
-
-export function verificarId(arreglo){
+export function generarId(arreglo: number[]){
 
     while(true){
-        let idgenerado = generarId();
+        let idgenerado = randomId();
         
-        if(arreglo.find(psj => psj.id != idgenerado)){
+        if(arreglo.find(psj => psj.getId() != idgenerado)){
             return idgenerado;
         }
     }   
