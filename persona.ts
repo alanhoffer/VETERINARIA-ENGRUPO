@@ -1,4 +1,4 @@
- export abstract class Persona {
+export abstract class Persona {
 
     private id:number;
     private nombre:string;
