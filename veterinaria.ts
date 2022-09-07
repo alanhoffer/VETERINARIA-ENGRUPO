@@ -22,8 +22,14 @@ export class Veterinaria {
   public getNombre(): string {
     return this.nombre;
   }
+  public setNombre(nombre:string){
+    this.nombre = nombre;
+  }
   public getDireccion(): string {
     return this.direccion;
+  }
+  public setDireccion(direccion:string){
+    this.direccion = direccion;
   }
   public agregarCliente(cliente: Cliente): void {
     this.clientes.push(cliente);

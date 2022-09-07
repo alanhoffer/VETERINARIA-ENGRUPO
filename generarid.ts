@@ -3,7 +3,7 @@ function randomId() {
 }
 
 
-export function generarId(arreglo: number[]){
+export function generarId(arreglo: any[]){
 
     while(true){
         let idgenerado = randomId();
